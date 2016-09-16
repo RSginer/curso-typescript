@@ -1,8 +1,13 @@
 class Coche{
     public color: string;
     public modelo: string;
-    public velocidad: number = 0;
+    public velocidad: number;
 
+    constructor(){
+        this.color = "Blanco";
+        this.velocidad = 0;
+        this.modelo = "BMW Serie 1";
+    }
     /**
      * getColor
      */

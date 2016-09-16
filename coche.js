@@ -1,6 +1,8 @@
 var Coche = (function () {
     function Coche() {
+        this.color = "Blanco";
         this.velocidad = 0;
+        this.modelo = "BMW Serie 1";
     }
     /**
      * getColor
