@@ -1,14 +1,14 @@
-interface CocheBase{
-    getColor():string;
-    getVelocidad():number;
+interface CocheBase {
+    getColor(): string;
+    getVelocidad(): number;
 }
 
-class Coche implements CocheBase{
+class Coche implements CocheBase {
     public color: string;
     public modelo: string;
     public velocidad: number;
 
-    constructor(){
+    constructor() {
         this.color = "Blanco";
         this.velocidad = 0;
         this.modelo = "BMW Serie 1";
@@ -16,26 +16,26 @@ class Coche implements CocheBase{
     /**
      * getColor
      */
-    public getColor():string {
+    public getColor(): string {
         return this.color;
     }
 
     /**
      * setColor
      */
-    public setColor(color:string) {
+    public setColor(color: string) {
         this.color = color;
     }
 
-    public acelerar(){
+    public acelerar() {
         this.velocidad++;
     }
 
-    public frenar(){
+    public frenar() {
         this.velocidad--;
     }
 
-    public getVelocidad():number{
+    public getVelocidad(): number {
         return this.velocidad;
     }
 }

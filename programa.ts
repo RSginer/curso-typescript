@@ -10,29 +10,29 @@ class Programa {
         this.version = version;
     }
 
-    getNombre():string{
+    getNombre(): string {
         return this.nombre;
     }
 
-    getVersion():number{
+    getVersion(): number {
         return this.version;
     }
 
 
 }
 
-class EditorVideo extends Programa{
-    public timeline:number;
+class EditorVideo extends Programa {
+    public timeline: number;
 
-    setTimeline(timeline:number){
+    setTimeline(timeline: number) {
         this.timeline = timeline;
     }
 
-    getTimeline(){
+    getTimeline() {
         return this.timeline;
     }
 
-    getAllData():string{
+    getAllData(): string {
         return this.getNombre() + " - " + this.getVersion() + " - " + this.getTimeline();
     }
 }
@@ -43,3 +43,24 @@ editor.setVersion(1);
 editor.setNombre("Camtasia studio");
 editor.setTimeline(4000);
 console.log(editor.getAllData());
+
+// Logica del formulario
+
+var programas:Array<Programa> = [];
+
+function guardar(){
+    var nombre = (<HTMLInputElement> document.getElementById("nombre")).value.toString();
+    var programa = new Programa();
+    programa.setNombre(nombre);
+    programas.push(programa);
+
+    var list = "";
+
+    for(var i = 0; i< programas.length;i++){
+        list = list + "<li>"+ programas[i].getNombre() + "</li>";
+    }
+
+    var listado = <HTMLElement> document.getElementById("listado");
+    listado.innerHTML = list;
+
+}

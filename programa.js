@@ -41,3 +41,17 @@ editor.setVersion(1);
 editor.setNombre("Camtasia studio");
 editor.setTimeline(4000);
 console.log(editor.getAllData());
+// Logica del formulario
+var programas = [];
+function guardar() {
+    var nombre = document.getElementById("nombre").value.toString();
+    var programa = new Programa();
+    programa.setNombre(nombre);
+    programas.push(programa);
+    var list = "";
+    for (var i = 0; i < programas.length; i++) {
+        list = list + "<li>" + programas[i].getNombre() + "</li>";
+    }
+    var listado = document.getElementById("listado");
+    listado.innerHTML = list;
+}
