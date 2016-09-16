@@ -54,4 +54,5 @@ function guardar() {
     }
     var listado = document.getElementById("listado");
     listado.innerHTML = list;
+    document.getElementById("nombre").value = "";
 }

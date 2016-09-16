@@ -62,5 +62,5 @@ function guardar(){
 
     var listado = <HTMLElement> document.getElementById("listado");
     listado.innerHTML = list;
-
+    (<HTMLInputElement> document.getElementById("nombre")).value = "";
 }
