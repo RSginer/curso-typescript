@@ -1,7 +1,7 @@
 class Coche{
     public color: string;
     public modelo: string;
-    public velocidad: number;
+    public velocidad: number = 0;
 
     /**
      * getColor
@@ -15,6 +15,18 @@ class Coche{
      */
     public setColor(color:string) {
         this.color = color;
+    }
+
+    public acelerar(){
+        this.velocidad++;
+    }
+
+    public frenar(){
+        this.velocidad--;
+    }
+
+    public getVelocidad(){
+        return this.velocidad;
     }
 }
 

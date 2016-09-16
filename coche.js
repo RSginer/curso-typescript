@@ -1,5 +1,6 @@
 var Coche = (function () {
     function Coche() {
+        this.velocidad = 0;
     }
     /**
      * getColor
@@ -13,6 +14,15 @@ var Coche = (function () {
     Coche.prototype.setColor = function (color) {
         this.color = color;
     };
+    Coche.prototype.acelerar = function () {
+        this.velocidad++;
+    };
+    Coche.prototype.frenar = function () {
+        this.velocidad--;
+    };
+    Coche.prototype.getVelocidad = function () {
+        return this.velocidad;
+    };
     return Coche;
 }());
 var coche = new Coche();
@@ -23,4 +33,4 @@ cocheDos.setColor("AZUL");
 cocheTres.setColor("VERDE");
 console.log("El color del coche 1 es : " + coche.getColor());
 console.log("El color del coche 2 es : " + cocheDos.getColor());
-console.log("El color del coche 2 es : " + cocheTres.getColor());
+console.log("El color del coche 3 es : " + cocheTres.getColor());
